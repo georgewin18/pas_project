@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: rgb(57, 57, 95);
+}
+
+input {
+    border: 0;
+    outline: 0;
+    background: white;
+    color: #0E7389;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 35px;
+    width: 80%;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+img {
+    width: 50px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 90%;
+    background: linear-gradient(135deg, #5DFF9E, #0E7389);
+    color: white;
+    border-radius: 30px;
+    padding: 30px 30px;
+    margin-right: 18px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.searchBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.weather {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 200px;
+    margin-top: 30px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+    gap: 20px;
+}
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.humidity, 
+.wind,
+.cloud {
+    font-size: 20px;
+    margin-top: -6px;
+}
+
+#search {
+    border: 0;
+    outline: 0;
+    background:  white;
+    border-radius: 50%;
+    width: 60px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+#forecast {
+    border: 0;
+    outline: 0;
+    background: linear-gradient(to right, rgb(13, 58, 78), rgb(6, 110, 144));
+    border-radius: 25px;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+}
+
+#back {
+    border: 0;
+    outline: 0;
+    background-color: rgb(155, 0, 0);
+    border-radius: 25px;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+}
+
+@media (min-width: 665px) {
+.details {
+    flex-direction: row;
+}
+}
+@media (min-width: 712px) {
+.weather {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.details {
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    gap: 50px;
+}     
+}
