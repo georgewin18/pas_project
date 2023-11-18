@@ -1,4 +1,4 @@
-const key = "2ee1f50b42f9a9574aa53907971c6b27";
+const key = "";
 const url = "http://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
 
 const searchBox = document.querySelector(".searchBar input");
@@ -7,7 +7,6 @@ const icon = document.querySelector(".icon");
 
 async function weatherCheck(city) {
   try {
-    // check apakah city tidak kosong
     if (!city) {
       alert("Silahkan ketik kota");
       searchBox.focus();
@@ -34,8 +33,7 @@ async function weatherCheck(city) {
     } else if (data.weather[0].main == "Mist") {
       icon.src = "resource/mist.png";
     }
-
-    // set url forecast
+    
     document.querySelector("#link_forecast").href = `forecast.html?&city=${city}`;
   } catch (error) {
     console.log(error);
@@ -43,7 +41,6 @@ async function weatherCheck(city) {
   }
 }
 
-// triggern function by key binding (ENTER)
 searchBox.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     weatherCheck(searchBox.value);
