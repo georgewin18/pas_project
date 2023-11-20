@@ -1,4 +1,4 @@
-const key = "2ee1f50b42f9a9574aa53907971c6b27";
+const key = "43b73dc8290fbbde40baf39532cfa832";
 const url = "http://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
 
 const searchBox = document.querySelector(".searchBar input");
@@ -33,8 +33,9 @@ async function weatherCheck(city) {
       icon.src = "resource/drizzle.png";
     } else if (data.weather[0].main == "Mist") {
       icon.src = "resource/mist.png";
+    } else if (data.weather[0].main == "Clear") {
+      icon.src = "resource/clear.png";
     }
-
     // set url forecast
     document.querySelector("#link_forecast").href = `forecast.html?&city=${city}`;
   } catch (error) {
