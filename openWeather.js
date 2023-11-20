@@ -7,7 +7,6 @@ const icon = document.querySelector(".icon");
 
 async function weatherCheck(city) {
   try {
-    // check apakah city tidak kosong
     if (!city) {
       alert("Silahkan ketik kota");
       searchBox.focus();
@@ -36,7 +35,7 @@ async function weatherCheck(city) {
     } else if (data.weather[0].main == "Clear") {
       icon.src = "resource/clear.png";
     }
-    // set url forecast
+
     document.querySelector("#link_forecast").href = `forecast.html?&city=${city}`;
   } catch (error) {
     console.log(error);
@@ -44,7 +43,6 @@ async function weatherCheck(city) {
   }
 }
 
-// triggern function by key binding (ENTER)
 searchBox.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     weatherCheck(searchBox.value);
