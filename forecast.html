@@ -99,7 +99,7 @@
     function getWeekDays(locale) {
       var baseDate = new Date(Date.now()); // just a Monday
       var weekDays = [];
-      for (i = 0; i < 7; i++) {
+      for (i = 0; i < 5; i++) {
         weekDays.push(baseDate.toLocaleDateString(locale, { weekday: "long" }));
         baseDate.setDate(baseDate.getDate() + 1);
       }
